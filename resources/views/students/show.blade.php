@@ -17,7 +17,7 @@
 
           <button type="submit" class="btn btn-primary">Edit</button>
           <button type="submit" class="btn btn-danger">Delete</button>
-          <a href="{{ url('/mahasiswa') }}" class="btn btn-success ml-auto">Back to List</a>
+          <a href="{{ url('/students') }}" class="btn btn-success ml-auto">Back to List</a>
         </div>
       </div>
     </div>
