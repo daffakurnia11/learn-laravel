@@ -36,6 +36,13 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nama'      => 'required',
+            'nrp'       => 'required|digits:14|unique:students,nrp',
+            'email'     => 'required|unique:students,email|email:rfc,dns',
+            'jurusan'   => 'required'
+        ]);
+
         Student::create($request->all());
 
         return redirect(url('/students'))->with('status', 'New Data has been inserted!');
