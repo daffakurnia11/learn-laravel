@@ -24,3 +24,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\PagesController@index');
 Route::get('/about', 'App\Http\Controllers\PagesController@about');
+
+Route::get('/mahasiswa', 'App\Http\Controllers\StudentsController@index');

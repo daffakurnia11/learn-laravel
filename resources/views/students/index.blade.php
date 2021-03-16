@@ -9,10 +9,12 @@
     <div class="col-sm-6">
       <h1>Student Lists</h1>
       <ul class="list-group">
+        @foreach ($students as $student)
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          A list item
-          <span class="badge badge-primary badge-pill">14</span>
+          {{ $student->nama }}
+          <a href="" class="badge badge-primary badge-pill">Detail</a>
         </li>
+        @endforeach
       </ul>
     </div>
   </div>
