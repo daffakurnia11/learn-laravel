@@ -25,7 +25,7 @@ class StudentsController extends Controller
      */
     public function create()
     {
-        //
+        return view('students.create');
     }
 
     /**
@@ -36,7 +36,9 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Student::create($request->all());
+
+        return redirect(url('/students'))->with('status', 'New Data has been inserted!');
     }
 
     /**

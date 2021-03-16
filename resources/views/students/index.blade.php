@@ -9,6 +9,13 @@
     <div class="col-sm-6">
       <h1>Student Lists</h1>
       <a href="{{ url('/students/create') }}" class="btn btn-primary mb-2">New Student</a>
+
+      @if (session('status'))
+      <div class="alert alert-success">
+        {{ session('status') }}
+      </div>
+      @endif
+
       <ul class="list-group">
         @foreach ($students as $student)
         <li class="list-group-item d-flex justify-content-between align-items-center">

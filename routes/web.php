@@ -26,4 +26,6 @@ Route::get('/', 'App\Http\Controllers\PagesController@index');
 Route::get('/about', 'App\Http\Controllers\PagesController@about');
 
 Route::get('/students', 'App\Http\Controllers\StudentsController@index');
+Route::get('/students/create', 'App\Http\Controllers\StudentsController@create');
 Route::get('/students/{student}', 'App\Http\Controllers\StudentsController@show');
+Route::post('/students', 'App\Http\Controllers\StudentsController@store');
