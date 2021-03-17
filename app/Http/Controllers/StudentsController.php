@@ -90,6 +90,8 @@ class StudentsController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
+        Student::destroy($student->id);
+
+        return redirect(url('/students'))->with('status', 'New Data has been deleted!');
     }
 }
